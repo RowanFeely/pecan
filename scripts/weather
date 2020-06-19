@@ -1,1 +1,1 @@
-echo "$(curl -s 'wttr.in/toorak,vic?format=☁+%C++⭡%t' | tr -d '{+}')"
+echo "$(curl -s 'wttr.in/toorak,vic?format=%C+☃+%t' | tr -d '{+}')"

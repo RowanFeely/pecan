@@ -189,7 +189,7 @@
   font-style: var(--pecan-font-style);
   background-color: var(--pecan-bg-pecannetwork);
   opacity: var(--pecan-opacity-inner);
-  color: #528b8b; /*var(--pecan-fg-pecannetwork);*/
+  color: #6688aa; /*var(--pecan-fg-pecannetwork);*/
   position: absolute;
   display: inline-block;
   top: var(--pecan-alignment-top);
@@ -244,7 +244,7 @@
   width: auto;
   top: var(--pecan-alignment-top);
   bottom: var(--pecan-alignment-bottom);
-  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 2) + 14ch + calc(var(--pecan-border) * 2));
+  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 2) + 15ch + calc(var(--pecan-border) * 2));
   transform: translate(-50%);
   margin: calc(var(--pecan-padding-v) + var(--pecan-border));
   line-height: var(--pecan-line-height);
@@ -256,12 +256,35 @@
   box-shadow: var(--pecan-shadow-inner);
 }
 
+.pecantask {
+  font: var(--pecan-font-size) var(--pecan-font);
+  font-style: var(--pecan-font-style);
+  color: #cc8800; /*#7c7c7c; var(--pecan-fg-pecandate);*/
+  background-color: var(--pecan-bg-pecandate);
+  opacity: 1;
+  position: absolute;
+  display: inline-block;
+  padding: 0 var(--pecan-text-padding);
+  width: auto;
+  top: var(--pecan-alignment-top);
+  bottom: var(--pecan-alignment-bottom);
+  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 4) + 29ch + calc(var(--pecan-border) * 4));
+  transform: translate(-50%);
+  margin: calc(var(--pecan-padding-v) + var(--pecan-border));
+  line-height: var(--pecan-line-height);
+  text-align: center;
+  border-top-left-radius: var(--pecan-border-radius-inner);
+  border-top-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-left-radius: var(--pecan-border-radius-inner);
+  box-shadow: var(--pecan-shadow-inner);
+}
 
 /* battery percentage -- 4th to left */
 .pecanbattery {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: #87875f; /*var(--pecan-fg-pecanbattery);*/
+  color: #aa4450; /*var(--pecan-fg-pecanbattery);*/
   display: inline-block;
   position: absolute;
   background-color: var(--pecan-bg-pecanbattery);
