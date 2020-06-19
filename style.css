@@ -3,8 +3,8 @@
 /* import colors */
 :root {
   /* background colors */
-  --pecan-bg: #fafafa;
-  --pecan-bg-pecanworkspace: #202020;
+  --pecan-bg: #222222;
+  --pecan-bg-pecanworkspace: #222222;
   --pecan-bg-pecannetwork: var(--pecan-bg-pecanworkspace);
   --pecan-bg-pecandate: var(--pecan-bg-pecanworkspace);
   --pecan-bg-pecanbattery: var(--pecan-bg-pecanworkspace);
@@ -12,28 +12,29 @@
   --pecan-xanthia-bg: var(--pecan-bg-pecanworkspace);
   --pecan-xanthia-image-bg: var(--pecan-bg-pecanworkspace);
   /* foreground colors */
-  --pecan-fg-pecanworkspace: #fafafa;
-  --pecan-fg-pecannetwork: var(--pecan-fg-pecanworkspace);
-  --pecan-fg-pecandate: var(--pecan-fg-pecanworkspace);
+  --pecan-fg-pecanworkspace: #c2c2b0;
+  --pecan-fg-pecannetwork: #c1cdc1; /*var(--pecan-fg-pecanworkspace);*/
+  --pecan-fg-pecandate: #d3d3d3; /*var(--pecan-fg-pecanworkspace);*/
   --pecan-fg-pecanbattery: var(--pecan-fg-pecanworkspace);
-  --pecan-fg-pecanclock: var(--pecan-fg-pecanworkspace);
-  --pecan-xanthia-fg: var(--pecan-fg-pecanworkspace);
+  --pecan-fg-pecanclock: #d3d3d3; /*var(--pecan-fg-pecanworkspace);*/
+  --pecan-xanthia-fg: #ff6a6a; /*var(--pecan-fg-pecanworkspace);*/
   /* size */
   --pecan-height: 30px;
   /* no variables accepted for chunk */
-  --pecan-chunkwm-bar: 32px;
-  --pecan-chunkwm-gaps: 7px;
+  --pecan-chunkwm-bar: 35px;
+  --pecan-chunkwm-gaps: 5px;
   --pecan-xanthia-max-width: none;
   --pecan-xanthia-max-height: none;
   --pecan-xanthia-min-width: none;
   --pecan-xanthia-min-height: calc(var(--pecan-height) - calc(var(--pecan-border) * 2));
-  --pecan-xanthia-image-size: calc(var(--pecan-height) - calc(var(--pecan-border) * 2));
+  /* --pecan-xanthia-image-size: calc(var(--pecan-height) - calc(var(--pecan-border) * 2)); */
+  --pecan-xanthia-image-size: 0px;
   --pecan-chunkwm-bar: 20px;
   /* opacity */
-  --pecan-opacity: 0;
+  --pecan-opacity: 1;
   /* this value affects --pecan-border */
   --pecan-opacity-inner: 1;
-  --pecan-opacity-center: 1;
+  --pecan-opacity-center: 0;
   --pecan-xanthia-opacity: 1;
   --pecan-xanthia-image-opacity: 1;
   /* alignment */
@@ -58,13 +59,13 @@
   --pecan-xanthia-image-padding-v: var(--pecan-xanthia-padding-v);
   --pecan-xanthia-image-padding-h: calc(var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 4) + 14ch + calc(3 * var(--pecan-border)));
   /* shadow */
-  --pecan-shadow: 0px 4px 10px 4px rgba(0,0,0,0.15);
-  --pecan-shadow-inner: 0px 1px 1px 1px rgba(0,0,0,0.15);
+  --pecan-shadow: 0px 4px 10px 4px rgba(0,0,0,0.0);
+  --pecan-shadow-inner: 0px 1px 1px 1px rgba(0,0,0,0.0);
   --pecan-xanthia-shadow: var(--pecan-shadow-inner);
   --pecan-xanthia-image-shadow: var(--pecan-shadow-inner);
   /* border */
   --pecan-border: 3px;
-  --pecan-border-radius: 0px;
+  --pecan-border-radius: 6px;
   --pecan-border-radius-inner: 3px;
   --pecan-xanthia-border-radius-left: var(--pecan-border-radius-inner);
   --pecan-xanthia-border-radius-right: 0px;
@@ -72,8 +73,8 @@
   --pecan-xanthia-image-border-radius-right: var(--pecan-border-radius-inner);
   --pecan-xanthia-image-border: none;
   /* typography */
-  --pecan-font: SF Mono, Menlo, Monospace;
-  --pecan-font-size: 11px;
+  --pecan-font: Cozette, SF Mono, scientifica, Menlo, Monospace;
+  --pecan-font-size: 13px;
   --pecan-font-style: regular;
   --pecan-line-height: calc(var(--pecan-height) - calc(var(--pecan-border) * 2));
   --pecan-text-padding: 2ch;
@@ -84,7 +85,7 @@
   --pecan-xanthia-line-height: var(--pecan-xanthia-min-height);
   --pecan-xanthia-text-padding: var(--pecan-text-padding);
   /* fade (to disable, set as "auto") */
-  --pecan-xanthia-time-visible: auto;
+  --pecan-xanthia-time-visible: 10s;
   --pecan-xanthia-image-time-visible: auto;
 }
 
@@ -137,7 +138,7 @@
 .pecanworkspace {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: var(--pecan-fg-pecanworkspace);
+  color: #ff9800; /*var(--pecan-fg-pecanworkspace);*/
   display: inline-block;
   position: absolute;
   background-color: var(--pecan-bg-pecanworkspace);
@@ -164,7 +165,7 @@
   font-style: var(--pecan-font-style);
   background-color: var(--pecan-bg-pecannetwork);
   opacity: var(--pecan-opacity-inner);
-  color: var(--pecan-fg-pecannetwork);
+  color: #c2c2b0; /*var(--pecan-fg-pecannetwork);*/
   position: absolute;
   display: inline-block;
   top: var(--pecan-alignment-top);
@@ -183,13 +184,36 @@
   box-shadow: var(--pecan-shadow-inner);
 }
 
+.pecanwifi {
+  font: var(--pecan-font-size) var(--pecan-font);
+  font-style: var(--pecan-font-style);
+  background-color: var(--pecan-bg-pecannetwork);
+  opacity: var(--pecan-opacity-inner);
+  color: #528b8b; /*var(--pecan-fg-pecannetwork);*/
+  position: absolute;
+  display: inline-block;
+  top: var(--pecan-alignment-top);
+  right: auto;
+  bottom: var(--pecan-alignment-bottom);
+  left: 0px;
+  padding: 0 var(--pecan-text-padding);
+  margin-top: calc(var(--pecan-border) + var(--pecan-padding-v));
+  margin-bottom: calc(var(--pecan-border) + var(--pecan-padding-v));
+  margin-left: calc(var(--pecan-padding-left) + calc(var(--pecan-text-padding) * 4) + 12ch + calc(var(--pecan-border) * 4));
+  line-height: var(--pecan-line-height);
+  border-top-left-radius: var(--pecan-border-radius-inner);
+  border-top-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-left-radius: var(--pecan-border-radius-inner);
+  box-shadow: var(--pecan-shadow-inner);
+}
 /* date -- center */
 .pecandate {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: var(--pecan-fg-pecandate);
+  color: #d3d3d3; /*var(--pecan-fg-pecandate);*/
   background-color: var(--pecan-bg-pecandate);
-  opacity: var(--pecan-opacity-center);
+  opacity: 1;
   position: absolute;
   display: inline-block;
   padding: 0 var(--pecan-text-padding);
@@ -208,11 +232,36 @@
   box-shadow: var(--pecan-shadow-inner);
 }
 
+.pecanweather {
+  font: var(--pecan-font-size) var(--pecan-font);
+  font-style: var(--pecan-font-style);
+  color: #c2c2b0; /*#7c7c7c; var(--pecan-fg-pecandate);*/
+  background-color: var(--pecan-bg-pecandate);
+  opacity: 1;
+  position: absolute;
+  display: inline-block;
+  padding: 0 var(--pecan-text-padding);
+  width: auto;
+  top: var(--pecan-alignment-top);
+  bottom: var(--pecan-alignment-bottom);
+  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 2) + 14ch + calc(var(--pecan-border) * 2));
+  transform: translate(-50%);
+  margin: calc(var(--pecan-padding-v) + var(--pecan-border));
+  line-height: var(--pecan-line-height);
+  text-align: center;
+  border-top-left-radius: var(--pecan-border-radius-inner);
+  border-top-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-right-radius: var(--pecan-border-radius-inner);
+  border-bottom-left-radius: var(--pecan-border-radius-inner);
+  box-shadow: var(--pecan-shadow-inner);
+}
+
+
 /* battery percentage -- 4th to left */
 .pecanbattery {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: var(--pecan-fg-pecanbattery);
+  color: #87875f; /*var(--pecan-fg-pecanbattery);*/
   display: inline-block;
   position: absolute;
   background-color: var(--pecan-bg-pecanbattery);
@@ -237,7 +286,7 @@
 .pecanclock {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: var(--pecan-fg-pecanclock);
+  color: #d3d3d3; /*var(--pecan-fg-pecanclock);*/
   display: inline-block;
   position: absolute;
   background-color: var(--pecan-bg-pecanclock);
