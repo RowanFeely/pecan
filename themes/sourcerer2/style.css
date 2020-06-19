@@ -244,7 +244,7 @@
   width: auto;
   top: var(--pecan-alignment-top);
   bottom: var(--pecan-alignment-bottom);
-  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 2) + 6ch + calc(var(--pecan-border) * 2));
+  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 2) + 15ch + calc(var(--pecan-border) * 2));
   transform: translate(-50%);
   margin: calc(var(--pecan-padding-v) + var(--pecan-border));
   line-height: var(--pecan-line-height);
@@ -268,7 +268,7 @@
   width: auto;
   top: var(--pecan-alignment-top);
   bottom: var(--pecan-alignment-bottom);
-  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 4) + 12ch + calc(var(--pecan-border) * 4));
+  left: calc(50% + var(--pecan-padding-right) + calc(var(--pecan-text-padding) * 4) + 29ch + calc(var(--pecan-border) * 4));
   transform: translate(-50%);
   margin: calc(var(--pecan-padding-v) + var(--pecan-border));
   line-height: var(--pecan-line-height);
@@ -284,7 +284,7 @@
 .pecanbattery {
   font: var(--pecan-font-size) var(--pecan-font);
   font-style: var(--pecan-font-style);
-  color: #c2c2b0; /*var(--pecan-fg-pecanbattery);*/
+  color: #aa4450; /*var(--pecan-fg-pecanbattery);*/
   display: inline-block;
   position: absolute;
   background-color: var(--pecan-bg-pecanbattery);
